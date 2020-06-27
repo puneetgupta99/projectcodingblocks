@@ -1,0 +1,15 @@
+#header{
+    height: 17vh;
+    width: 80vw;
+    text-align: center;
+    background-color: rgb(223, 223, 223);
+    box-shadow: 3px 5px 5px 0px black;
+    display: inline-block;
+}
+
+
+ #header img{
+
+    height: 64px;
+    width: 64px;
+}

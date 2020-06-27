@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<div id='form' >
+<form action="/task/add" method="POST" id='todoform'>
+
+    <input type="text" name="taskname" placeholder="Enter Task Label" required>
+    <input type="date" name="date" placeholder="Enter Date" required>
+    <br>
+    <textarea name="task_description" cols="50" rows="20" required placeholder="Describe Your Task"></textarea>
+
+</form>
+
+</div>
+<div id='taskInterface'>
+
+    <ul>
+       
+        <% for(let i of TodoLS) { %>
+        <li>     
+        <p> Name: <%= i.taskName %></p>
+        <p> Date: <%= i.date %> </p>
+        <p> Task Description: <%= i.taskDescription %></p>
+        </li>
+        <a href="/task/delete/?id=<%= i._id %>"><button><b>DELETE</b></button></a>
+        
+        <br><br><br><br>
+
+        <%}%>
+    </ul>
+
+</div>
